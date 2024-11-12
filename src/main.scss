@@ -1,8 +1,15 @@
-@import url('./partials/sass/_variables.scss');
-@import url('./partials/sass/_common.scss');
-@import url('./partials/sass/_container.scss');
-@import url('./partials/sass/_breakpoints.scss');
-@import url('./partials/sass/_main.scss');
-@import url('./partials/sass/_header.scss');
-@import url('./partials/sass/_footer.scss');
-@import url('./partials/sass/_modal.scss');
+// @import './sass/variables';
+@import './sass/common';
+
+$bgc: red;
+h1{
+    background-color: $bgc;
+}
+
+
+// @forward './sass/container';
+// @forward './sass/breakpoints';
+// @forward './sass/main';
+// @forward './sass/header';
+// @forward './sass/footer';
+// @forward './sass/modal';
