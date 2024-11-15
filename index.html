@@ -18,7 +18,21 @@
   </head>
   <body>
     <header class="container">
-      
+      <div class="search-bar">
+    </div>
+    
+    <div id="eventsContainer" class="events-container">
+
+    <input type="text" id="searchInput" placeholder="Start searching">
+    <div class="autocomplete">
+        <input id="countryInput" type="text" placeholder="Choose country">
+        <div id="autocomplete-list" class="autocomplete-items"></div>
+    </div>
+    <button onclick="searchEvents()">Search</button>
+</div>
+<div id="results">
+</div>
+</div>
     </header>
     <main class="container">
       <div class="container my-5">
