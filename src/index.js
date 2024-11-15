@@ -1,1 +1,6 @@
-import './main.scss'
+import './partials/js/API'
+import './partials/js/main'
+import './partials/js/modal'
+import './partials/js/pagination'
+import './partials/js/search-by-country'
+import './partials/js/search-by-name'
