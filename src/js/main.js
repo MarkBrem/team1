@@ -10,9 +10,9 @@ function renderEvents(events) {
       <div class="card event-card h-100">
         <img src="${event.images[0]?.url}" class="card-img-top" alt="${event.name}">
         <div class="card-body d-flex flex-column">
-          <h5 class="card-title">${event.name}</h5>
-          <p class="card-text mb-2"><strong>Date:</strong> ${event.dates.start.localDate}</p>
-          <p class="card-text"><strong>Venue:</strong> ${event._embedded.venues[0].name}</p>
+          <h1 class="card-title">${event.name}</h5>
+          <p class="date card-text mb-2">${event.dates.start.localDate}</p>
+          <p class="where card-text">${event._embedded.venues[0].name}</p>
         </div>
       </div>
     `;

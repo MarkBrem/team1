@@ -1,15 +1,7 @@
-// @import './sass/variables';
+@import './sass/variables';
 @import './sass/common';
-
-$bgc: red;
-h1{
-    background-color: $bgc;
-}
-
-
-// @forward './sass/container';
-// @forward './sass/breakpoints';
-// @forward './sass/main';
-// @forward './sass/header';
-// @forward './sass/footer';
-// @forward './sass/modal';
+@import './sass/container';
+@import './sass/main';
+@import './sass/header';
+@import './sass/footer';
+@import './sass/modal';
