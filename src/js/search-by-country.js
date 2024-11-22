@@ -1,3 +1,9 @@
+import {getEventByCountry} from './API'
+
+
+const searchInput = document.getElementById("searchInput")
+const  countrySelect = document.getElementById("countrySelect")
+
 
 function searchByCountry() {
     const country = document.getElementById("countryInput").value;
@@ -59,3 +65,10 @@ function autocomplete(input, arr){
         });
     });}
 
+
+
+
+    countrySelect.addEventListener("change", (event)=>{
+        getEventByCountry(event.target.value)
+    
+    })   
