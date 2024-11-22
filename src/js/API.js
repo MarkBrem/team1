@@ -20,7 +20,7 @@ async function fetchEvents() {
 }
 
 
-async function getEventByCountry(countryCode){
+export async function getEventByCountry(countryCode){
   try {
    const url = `${BASEURL}${API}&countryCode=${countryCode}`
     const response = await fetch(url)
