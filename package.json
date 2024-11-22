@@ -10,7 +10,15 @@
   },
   "devDependencies": {
     "glob": "^8.1.0",
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+    "sass": "^1.80.6",
+>>>>>>> Stashed changes
     "vite": "^4.0.5"
+=======
+    "vite": "^4.5.5"
+>>>>>>> Stashed changes
   },
   "author": " ",
   "license": "ISC",

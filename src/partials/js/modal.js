@@ -45,6 +45,7 @@ const eventsData = [
       priceStandard: "Standart 499 UAH",
       priceVIP: "VIP 999 UAH"
     },
+<<<<<<< Updated upstream
     {
       id: 5,
       info: "MONATIK LOVE IT RYTHM",
@@ -56,6 +57,8 @@ const eventsData = [
       priceStandard: "Standart 499 UAH",
       priceVIP: "VIP 999 UAH"    
     },
+=======
+>>>>>>> Stashed changes
   ];
 
 const modal = document.getElementById("modal");
@@ -74,7 +77,10 @@ const priceVIP = document.getElementById("modal-price-vip");
 
 function openModal(eventId) {
     const eventData = eventsData.find(event => event.id === eventId);
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 if (eventData) {
     infoText.textContent = eventData.info;
     whenDate.textContent = eventData.whenDate;
@@ -88,3 +94,16 @@ if (eventData) {
     modal.style.display = "block";
   }
 }
+<<<<<<< Updated upstream
+=======
+
+function closeModal(event) {
+  if (!event || event.target === document.getElementById('modal')) {
+    document.getElementById('modal').style.display = 'none';
+    document.removeEventListener('keydown', handleEscape);
+  }
+  if (event.key === 'Escape') {
+    closeModal();
+  }
+}
+>>>>>>> Stashed changes
