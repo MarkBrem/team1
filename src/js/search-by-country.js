@@ -1,4 +1,4 @@
-import {getEventByCountry} from './API'
+import getEventByCountry from './API'
 
 
 const searchInput = document.getElementById("searchInput")
