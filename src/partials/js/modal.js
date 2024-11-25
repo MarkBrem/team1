@@ -1,6 +1,5 @@
-const baseURL = "";
-
-const eventsData = [
+// Данные мероприятий
+  const eventsData = [
     {
       id: 1,
       info: "Atlas Weekend is the largest music festival in Ukraine. More than 200 artists will create a proper music festival atmosphere on 10 stages.",
@@ -44,45 +43,57 @@ const eventsData = [
       who: "Monatik",
       priceStandard: "Standart 499 UAH",
       priceVIP: "VIP 999 UAH"
-    },]
-
-    const modal = document.getElementById("modal");
-    const closeBtn = document.getElementById("close-btn");
-    
-    const infoText = document.getElementById("modal-info-text");
-    const whenDate = document.getElementById("modal-when-date");
-    const whenTime = document.getElementById("modal-when-time");
-    const whereCity = document.getElementById("modal-where-city");
-    const whereLocation = document.getElementById("modal-where-location");
-    const whoText = document.getElementById("modal-who");
-    const priceStandard = document.getElementById("modal-price-standard");
-    const priceVIP = document.getElementById("modal-price-vip");
-    
-    
-    
-    function openModal(eventId) {
-        const eventData = eventsData.find(event => event.id === eventId);
-    if (eventData) {
-        infoText.textContent = eventData.info;
-        whenDate.textContent = eventData.whenDate;
-        whenTime.textContent = eventData.whenTime;
-        whereCity.textContent = eventData.whereCity;
-        whereLocation.textContent = eventData.whereLocation;
-        whoText.textContent = eventData.who;
-        priceStandard.textContent = eventData.priceStandard;
-        priceVIP.textContent = eventData.priceVIP;
-        
-        modal.style.display = "block";
-      }
     }
-    function closeModal(event) {
-      if (!event || event.target === document.getElementById('modal')) {
-        document.getElementById('modal').style.display = 'none';
-        document.removeEventListener('keydown', handleEscape);
-      }
-      if (event.key === 'Escape') {
-        closeModal();
-      }
-    }
-    
+];
 
+const modal = document.getElementById("modal");
+const closeBtn = document.getElementById("close-btn");
+const openModalImg = document.getElementById("openModalImg");
+
+const infoText = document.getElementById("modal-info-text");
+const whenDate = document.getElementById("modal-when-date");
+const whenTime = document.getElementById("modal-when-time");
+const whereCity = document.getElementById("modal-where-city");
+const whereLocation = document.getElementById("modal-where-location");
+const whoText = document.getElementById("modal-who");
+const priceStandard = document.getElementById("modal-price-standard");
+const priceVIP = document.getElementById("modal-price-vip");
+
+function openModal(eventId) {
+  const eventData = eventsData.find(event => event.id === eventId);
+  if (eventData) {
+      infoText.textContent = eventData.info;
+      whenDate.textContent = eventData.whenDate;
+      whenTime.textContent = eventData.whenTime;
+      whereCity.textContent = eventData.whereCity;
+      whereLocation.textContent = eventData.whereLocation;
+      whoText.textContent = eventData.who;
+      priceStandard.textContent = eventData.priceStandard;
+      priceVIP.textContent = eventData.priceVIP;
+
+      modal.style.display = "block"; 
+  }
+}
+
+
+function closeModal() {
+  modal.style.display = "none";
+}
+
+openModalImg.addEventListener("click", () => {
+  openModal(1); 
+});
+
+closeBtn.addEventListener("click", closeModal);
+
+window.addEventListener("click", (event) => {
+  if (event.target === modal) {
+      closeModal();
+  }
+});
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+      closeModal();
+  }
+});
