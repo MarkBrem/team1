@@ -1,13 +1,16 @@
 import renderEvents from "./main";
-export const BASEURL = 'https://app.ticketmaster.com/discovery/v2/events?';
-export const API = 'apikey=frHax5AbrwLC1IuSbtMAkrrAQfOByT93';
+
 const eventsContainer = document.getElementById('events');
+
+
+const BASEURL = 'https://app.ticketmaster.com/discovery/v2/events?';
+const API = 'apikey=frHax5AbrwLC1IuSbtMAkrrAQfOByT93';
 
 async function fetchEvents() {
   try {
     const response = await fetch(`${BASEURL}${API}&locale=*`);
     const data = await response.json();
-console.log(response);
+
 
     const events = data._embedded?.events || [];
     renderEvents(events);
@@ -15,6 +18,7 @@ console.log(response);
     console.error('Error fetching events:', error);
   }
 }
+
 
 export async function getEventByCountry(countryCode){
   try {
@@ -27,9 +31,6 @@ export async function getEventByCountry(countryCode){
     console.log('error');
   }
 }
-
-
-
 
 
 
