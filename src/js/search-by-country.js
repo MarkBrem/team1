@@ -1,4 +1,5 @@
-import getEventByCountry from './API'
+import {getEventByCountry} from './API'
+import renderEvents from './main'
 
 
 const searchInput = document.getElementById("searchInput")

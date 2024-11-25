@@ -16,5 +16,17 @@ console.log(response);
   }
 }
 
+export async function getEventByCountry(countryCode){
+  try {
+   const url = `${BASEURL}${API}&countryCode=${countryCode}`
+    const response = await fetch(url)
+    const data = await response.json()
+    const events = data._embedded?.events || [];
+    return events
+  } catch (error) {
+    console.log('error');
+  }
+}
+
 fetchEvents();
 export default fetchEvents
