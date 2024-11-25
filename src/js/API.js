@@ -28,5 +28,10 @@ export async function getEventByCountry(countryCode){
   }
 }
 
+
+
+
+
+
 fetchEvents();
 export default fetchEvents
