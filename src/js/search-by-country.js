@@ -1,44 +1,15 @@
-const countries = ["USA", "Canada", "Ukraine", "Poland", "Germany", "France"]; 
+import {getEventByCountry} from './API'
 
 
-const events = [
-    {
-        title: "Eurovision 2021 Finals!",
-        date: "2021-05-13",
-        location: "Palace of Ukraine",
-        country: "Ukraine",
-        imageUrl: "path_to_image1.jpg"
-    },
-    {
-        title: "Atlas Weekend - Black Eyed Peas",
-        date: "2021-06-09",
-        location: "VDNH",
-        country: "Ukraine",
-        imageUrl: "path_to_image2.jpg"
-    },
-    {
-        title: "LP Concert",
-        date: "2021-07-27",
-        location: "Palace of Ukraine",
-        country: "Ukraine",
-        imageUrl: "path_to_image3.jpg"
-    },
-    {
-        title: "Monatik Love It Rhythm",
-        date: "2021-07-17",
-        location: "VDNH",
-        country: "Ukraine",
-        imageUrl: "path_to_image4.jpg"
-    },    
-
-];
+const searchInput = document.getElementById("searchInput")
+const  countrySelect = document.getElementById("countrySelect")
 
 
 function searchByCountry() {
-    const country = document.getElementById("countrySelect").value;
+    const country = document.getElementById("countryInput").value;
     const eventsContainer = document.getElementById("eventsContainer");
     eventsContainer.innerHTML = "";
-    const filteredEvents = events.filter(event => event.country === country || country === "");
+
 
     filteredEvents.forEach(event => {
         const eventCard = document.createElement("div");
@@ -93,3 +64,11 @@ function autocomplete(input, arr){
             }
         });
     });}
+
+
+
+
+    countrySelect.addEventListener("change", (event)=>{
+        getEventByCountry(event.target.value)
+    
+    })   
