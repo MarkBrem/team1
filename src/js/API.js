@@ -1,8 +1,4 @@
 import renderEvents from "./main";
-
-const eventsContainer = document.getElementById('events');
-
-
 export const BASEURL = 'https://app.ticketmaster.com/discovery/v2/events?';
 export const API = 'apikey=frHax5AbrwLC1IuSbtMAkrrAQfOByT93';
 const eventsContainer = document.getElementById('events');
