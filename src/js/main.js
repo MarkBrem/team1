@@ -3,6 +3,7 @@ import fetchEvents from './API'
 const eventsContainer = document.getElementById('events');
 function renderEvents(events) {
   eventsContainer.innerHTML = ''; 
+  console.log(events);
   events.forEach(event => {
     const eventCard = document.createElement('div');
     eventCard.classList.add('col-md-4', 'col-sm-6', 'col-lg-3');

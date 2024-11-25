@@ -71,5 +71,9 @@ function autocomplete(input, arr){
 
     countrySelect.addEventListener("change", (event)=>{
         getEventByCountry(event.target.value)
+        .then((events)=>{
+            console.log(events);
+            renderEvents(events)
+        })
     
     })   
