@@ -31,15 +31,7 @@ export async function getEventByCountry(countryCode){
   }
 }
 
-getEventByCountry('')
-.then((data)=>{
-  if (data._embedded) {
-    renderEvents(data._embedded.events)
 
-  } else {
-    eventsContainer.innerHTML = `<p>No events found for country: ${countryCode}</p>`
-  }
-})
 
-// fetchEvents();
+fetchEvents();
 export default fetchEvents

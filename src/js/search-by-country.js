@@ -1,4 +1,5 @@
 import {getEventByCountry} from './API'
+import renderEvents from './main'
 
 
 const searchInput = document.getElementById("searchInput")
@@ -70,5 +71,9 @@ function autocomplete(input, arr){
 
     countrySelect.addEventListener("change", (event)=>{
         getEventByCountry(event.target.value)
+        .then((events)=>{
+            console.log(events);
+            renderEvents(events)
+        })
     
     })   
