@@ -25,7 +25,8 @@ export async function getEventByCountry(countryCode){
    const url = `${BASEURL}${API}&countryCode=${countryCode}`
     const response = await fetch(url)
     const data = await response.json()
-    return data
+    const events = data._embedded?.events || [];
+    return events
   } catch (error) {
     console.log('error');
   }
