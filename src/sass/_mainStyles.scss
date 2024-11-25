@@ -1,4 +1,4 @@
-.container{
+.container.main{
     background-image: url(../img/mainBody.png);
     background-size: auto;
 }
@@ -23,4 +23,16 @@
     font-size: 14px;
     font-weight: $SemiBolt;
     color: $textColor;
+}
+
+.where::before{
+    content: '';
+    width: 20px;
+    background-image: url(../img/mainBody.png);
+}
+
+
+.card-img-top{
+    width: 165px;
+    height: 100px;
 }

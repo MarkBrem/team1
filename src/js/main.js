@@ -19,5 +19,8 @@ function renderEvents(events) {
     eventsContainer.appendChild(eventCard);
   });
 }
+
+
+
 export default renderEvents
 
