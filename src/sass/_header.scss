@@ -5,7 +5,28 @@
     box-sizing: 0;
 }
 
+.tittle-img{
+    width: 1600px;
+gap: 0px;
+opacity: 0px;
+
+}
+.container head{
+    position: relative;
+    background: #0B0B0B80;
+
+}
+.head-img{
+    position: absolute;
+    width: 200px;
+top: 0;
+left:160px;
+gap: 0px;
+opacity: 0px;
+
+}
 .search-bar{
+
     width: 1280px;
 height: 446px;
 gap: 0px;
@@ -22,9 +43,19 @@ text-align: center;
 text-underline-position: from-font;
 text-decoration-skip-ink: none;
 
+
 }
 
 .search-tittle-count{
+
+    position: absolute;
+    width: 588px;
+    height: 122px;
+    top: 40px;
+    left: 445px;
+    gap: 0px;
+    opacity: 0px;
+    
     font-family: Montserrat;
 font-size: 50px;
 font-weight: 900;
@@ -34,41 +65,66 @@ text-underline-position: from-font;
 text-decoration-skip-ink: none;
 color: #DC56C5;
 
+
 }
 
 
 .autocomplete select{
+    margin-top: 20px;
+    position: absolute;
     padding: 10px 15px;
+    color: #fff; 
     font-size: 16px;
     border: none;
     border-radius: 20px 20px ;
-    outline: none;
     width: 270px;
     height: 40px;
+    font-family: 'Arial', sans-serif;
     top: 214px;
-    left: 655px;
+    left: 755px;
     gap: 0px;
     opacity: 0px;
     background: #939393;
+    
     backdrop-filter: blur(20px);
+    appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+select:focus {
+    outline: none; 
+  }
+
+.autocomplete{
+    display: inline-flex;
+    align-items: center;
+ 
 }
 
+.arrow {
+    font-size: 14px;
+    color: #e4112a;
+    margin-left: -25px; 
+    pointer-events: none; 
+  }
+  
+
 .searchInputSel{
-
-
-
+padding: 10px;
+margin-top: 20px;
+position: relative;
+    position: absolute;
     border: none;
     outline: none;
     color: #fff; 
     font-size: 16px;
     font-family: 'Arial', sans-serif;
-    margin-right: 10px;
     backdrop-filter: blur(20px);
     width: 270px;
     background: #939393;
 height: 40px;
 top: 214px;
-left: 355px;
+left: 455px;
 gap: 0px;
 border-radius: 20px 20px ;
 opacity: 0px;
@@ -79,6 +135,8 @@ opacity: 0px;
     color: rgba(255, 255, 255, 0.7); 
   }
   .search-button {
+    position: absolute;
+
     background: none;
     border: none;
     color: rgba(255, 255, 255, 0.7);
