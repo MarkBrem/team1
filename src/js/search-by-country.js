@@ -1,4 +1,4 @@
-import {getEventByCountry} from './API'
+import {getEventByCountry, getEventBySearchKey} from './API'
 import renderEvents from './main'
 
 
@@ -67,13 +67,26 @@ function autocomplete(input, arr){
     });}
 
 
-
-
     countrySelect.addEventListener("change", (event)=>{
-        getEventByCountry(event.target.value)
+        const country = event.currentTarget.value.toLowerCase();
+        getEventByCountry(country)
         .then((events)=>{
             console.log(events);
             renderEvents(events)
         })
     
     })   
+
+    //додати debouсe до події інпут
+
+
+    document.getElementById("searchInputSel").addEventListener("input" ,  function (event) {
+        const keyword = event.currentTarget.value.toLowerCase();
+        getEventBySearchKey(keyword)
+        .then(events=>{
+            renderEvents(events);
+        })
+      });
+
+
+
