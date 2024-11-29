@@ -34,5 +34,18 @@ export async function getEventByCountry(countryCode){
 
 
 
+
+export async function getEventBySearchKey(keyword){
+  try {
+   const url = `${BASEURL}${API}&keyword=${keyword}`
+    const response = await fetch(url)
+    const data = await response.json()
+    const events = data._embedded?.events || [];
+    return events
+  } catch (error) {
+    console.log('error');
+  }
+}
+
 fetchEvents();
 export default fetchEvents
