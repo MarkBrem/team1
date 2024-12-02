@@ -77,16 +77,17 @@ function autocomplete(input, arr){
     
     })   
 
-    //додати debouсe до події інпут
 
-
-    document.getElementById("searchInputSel").addEventListener("input" ,  function (event) {
-        const keyword = event.currentTarget.value.toLowerCase();
-        getEventBySearchKey(keyword)
-        .then(events=>{
-            renderEvents(events);
-        })
-      });
+    document.getElementById("searchInputSel").addEventListener("input",
+        lodash.debounce( function (event) {
+            console.log('Madonna');
+            const keyword = event.currentTarget.value.toLowerCase();
+            getEventBySearchKey(keyword)
+            .then(events=>{
+                renderEvents(events);
+            })
+        }, 500)
+    );
 
 
 
