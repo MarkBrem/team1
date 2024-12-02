@@ -1,6 +1,6 @@
-import {getEventByCountry, getEventBySearchKey} from './API'
-import renderEvents from './main'
-
+import {getEventByCountry, getEventBySearchKey} from './API';
+import renderEvents from './main';
+import throttle from 'lodash.throttle';
 
 const searchInput = document.getElementById("searchInput")
 const  countrySelect = document.getElementById("countrySelect")
@@ -79,7 +79,7 @@ function autocomplete(input, arr){
 
 
     document.getElementById("searchInputSel").addEventListener("input",
-        lodash.debounce( function (event) {
+       throttle( function (event) {
             console.log('Madonna');
             const keyword = event.currentTarget.value.toLowerCase();
             getEventBySearchKey(keyword)
