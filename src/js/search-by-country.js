@@ -1,6 +1,6 @@
-import {getEventByCountry, getEventBySearchKey} from './API'
-import renderEvents from './main'
-
+import {getEventByCountry, getEventBySearchKey} from './API';
+import renderEvents from './main';
+import throttle from 'lodash.throttle';
 
 const searchInput = document.getElementById("searchInput")
 const  countrySelect = document.getElementById("countrySelect")
@@ -77,16 +77,17 @@ function autocomplete(input, arr){
     
     })   
 
-    //додати debouсe до події інпут
 
-
-    document.getElementById("searchInputSel").addEventListener("input" ,  function (event) {
-        const keyword = event.currentTarget.value.toLowerCase();
-        getEventBySearchKey(keyword)
-        .then(events=>{
-            renderEvents(events);
-        })
-      });
+    document.getElementById("searchInputSel").addEventListener("input",
+       throttle( function (event) {
+            console.log('Madonna');
+            const keyword = event.currentTarget.value.toLowerCase();
+            getEventBySearchKey(keyword)
+            .then(events=>{
+                renderEvents(events);
+            })
+        }, 500)
+    );
 
 
 
