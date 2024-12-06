@@ -1,79 +1,67 @@
 h1 {
     color: #DC56C5;
-}
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow: hidden; 
+    font-size: 24px;
 }
 
-.thumbnail {
-    display: block;
-    margin: 50px auto;
-    width: 200px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+p {
+    font-size: 18px;
+    color: #0E0E0E;
 }
-
-.thumbnail:hover {
-    transform: scale(1.1); 
-}
-
 
 .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
+    border-radius: 300px 0px 0px 300px;
 }
 
-.modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 500px;
-    width: 90%;
+.close-btn {
+    color: #4C00FE;
+}
+
+.img__preview {
+    border-radius: 50px 0px 0px 50px;
+    width: 144px;
+    height: 181px;
+}
+
+.prices__btn {
+    border-radius: 5px;
+    background-color: #4C00FE;
+    color: #FFFFFF;
+    width: 145px;
+    height: 40px;
+}
+
+.more__but {
+    background-color: transparent;
+    color: #4C00FE;
+    border: 2px solid #4C00FE;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
     text-align: center;
-    position: relative;
-    animation: fadeIn 0.3s ease;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
+.img__modal {
+    width: 360px;
+    height: 641px;
+}
+
+@media (max-width: 768px) {
+    .modal {
+      width: 90%;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+  
+    p {
+      word-wrap: break-word;
     }
-}
+  }
 
-#close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    color: red;
-}
-
-.info__section,
-.when__section,
-.where__section,
-.who__section,
-.prices__section {
-    display: none; 
-}
-
-.modal-content p {
-    margin: 10px 0;
-    font-size: 16px;
-    line-height: 1.5;
-}
+  @media (max-width: 480px) {
+    .modal {
+      width: 100%;
+    }
+  
+    p {
+      word-wrap: break-word;
+    }
+  }
+  

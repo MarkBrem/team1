@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-    <img src="../img/1.png" id="openModalImg" class="thumbnail">
     <div id="modal" class="modal">
         <div class="modal-content">
           <span id="close-btn">Закрити</span>
+          <img src="../img/1.png" id="openModalImg" class="img__modal">
+          <img src="../img/1.png" id="openModalImg" class="img__preview">
           <div class="info__section">
               <h1>INFO</h1>
               <p id="modal-info-text"></p>    
@@ -31,12 +32,17 @@
           </div>
           <div class="prices__section">
               <h1>PRICES</h1>
-              <p id="modal-price-standard"></p> 
+              <p id="modal-price-standard">
+                <!-- svg -->
+              </p> 
               <button class="prices__btn">BUY TICKETS</button>
-              <p id="modal-price-vip"></p> 
+              <p id="modal-price-vip">
+                <!-- svg -->
+              </p> 
               <button class="prices__btn">BUY TICKETS</button>
           </div>
         </div>
+        <button class="more__but">MORE FROM THIS AUTHOR</button>
       </div>
     <script src="script.js"></script>
 </body>
