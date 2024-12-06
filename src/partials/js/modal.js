@@ -1,67 +1,33 @@
-// Данные мероприятий
+// document.addEventListener("DOMContentLoaded", () => {
+//   const modal = document.getElementById("modal");
+//   const closeBtn = document.getElementById("close-btn");
+//   const openModalImg = document.getElementById("openModalImg");
+
+//   const infoText = document.getElementById("modal-info-text");
+//   const whenDate = document.getElementById("modal-when-date");
+//   const whenTime = document.getElementById("modal-when-time");
+//   const whereCity = document.getElementById("modal-where-city");
+//   const whereLocation = document.getElementById("modal-where-location");
+//   const whoText = document.getElementById("modal-who");
+//   const priceStandard = document.getElementById("modal-price-standard");
+//   const priceVIP = document.getElementById("modal-price-vip");
+
   const eventsData = [
-    {
-      id: 1,
-      info: "Atlas Weekend is the largest music festival in Ukraine. More than 200 artists will create a proper music festival atmosphere on 10 stages.",
-      whenDate: "2021-06-09",
-      whenTime: "20:00 (Kyiv/Ukraine)",
-      whereCity: "Kyiv, Ukraine",
-      whereLocation: "VDNH",
-      who: "The Black Eyed Peas",
-      priceStandard: "Standart 300-500 UAH",
-      priceVIP: "VIP 1000-1500 UAH"
-    },
-    {
-      id: 2,
-      info: "Eurovision 2021 finals!",
-      whenDate: "2021-05-13",
-      whenTime: "18:00 (Kyiv/Ukraine)",
-      whereCity: "Kyiv, Ukraine",
-      whereLocation: "Palace of Ukraine",
-        who: "All Eurovision participants",
-        priceStandard: "Standart 1999 UAH",
-        priceVIP: "VIP 2999 UAH"
-    },
-    {
-      id: 3,
-      info: "LP special close event, includes lot of her songs + personal speach",
-      whenDate: "2021-07-27",
-      whenTime: "19:00 (Kyiv/Ukraine)",
-      whereCity: "Kyiv, Ukraine",
-      whereLocation: "Palace of Ukraine",
-      who: "LP",
-      priceStandard: "Standart 999 UAH",
-      priceVIP: "VIP 1999 UAH"
-    },
-    {
-      id: 4,
-      info: "MONATIK LOVE IT RYTHM",
-      whenDate: "2021-07-17",
-      whenTime: "18:00 (Kyiv/Ukraine)",
-      whereCity: "Kyiv, Ukraine",
-      whereLocation: "Palats Sportu",
-      who: "Monatik",
-      priceStandard: "Standart 499 UAH",
-      priceVIP: "VIP 999 UAH"
-    }
-];
+      {
+          id: 1,
+          info: "Atlas Weekend is the largest music festival in Ukraine. More than 200 artists will create a proper music festival atmosphere on 10 stages.",
+          whenDate: "2021-06-09",
+          whenTime: "20:00 (Kyiv/Ukraine)",
+          whereCity: "Kyiv, Ukraine",
+          whereLocation: "VDNH",
+          who: "The Black Eyed Peas",
+          priceStandard: "Standard: 300-500 UAH",
+          priceVIP: "VIP: 1000-1500 UAH"
+      }
+  ];
 
-const modal = document.getElementById("modal");
-const closeBtn = document.getElementById("close-btn");
-const openModalImg = document.getElementById("openModalImg");
-
-const infoText = document.getElementById("modal-info-text");
-const whenDate = document.getElementById("modal-when-date");
-const whenTime = document.getElementById("modal-when-time");
-const whereCity = document.getElementById("modal-where-city");
-const whereLocation = document.getElementById("modal-where-location");
-const whoText = document.getElementById("modal-who");
-const priceStandard = document.getElementById("modal-price-standard");
-const priceVIP = document.getElementById("modal-price-vip");
-
-function openModal(eventId) {
-  const eventData = eventsData.find(event => event.id === eventId);
-  if (eventData) {
+  openModalImg.addEventListener("click", () => {
+      const eventData = eventsData[0];
       infoText.textContent = eventData.info;
       whenDate.textContent = eventData.whenDate;
       whenTime.textContent = eventData.whenTime;
@@ -70,30 +36,25 @@ function openModal(eventId) {
       whoText.textContent = eventData.who;
       priceStandard.textContent = eventData.priceStandard;
       priceVIP.textContent = eventData.priceVIP;
-
-      modal.style.display = "block"; 
-  }
-}
+      modal.style.display = "flex";
+  });
 
 
-function closeModal() {
-  modal.style.display = "none";
-}
+  closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+  });
 
-openModalImg.addEventListener("click", () => {
-  openModal(1); 
-});
+  window.addEventListener("click", (event) => {
+      if (event.target === modal) {
+          modal.style.display = "none";
+      }
+  });
 
-closeBtn.addEventListener("click", closeModal);
+  window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+          modal.style.display = "none";
+      }
+  });
 
-window.addEventListener("click", (event) => {
-  if (event.target === modal) {
-      closeModal();
-  }
-});
-
-window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-      closeModal();
-  }
-});
+modal.querySelectorAll('.info__section, .when__section, .where__section, .who__section, .prices__section')
+     .forEach(section => section.style.display = 'block');
