@@ -1,77 +1,73 @@
-*{
-    margin: 0;
 
-    padding: 0;
-    box-sizing: 0;
+
+
+header{
+  align-items: center;
+  background-image: url(img/pic.jpg) ;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.tittle-img{
-    width: 1600px;
-gap: 0px;
-opacity: 0px;
 
-}
-.container head{
-    position: relative;
-    background: #0B0B0B80;
 
+.headCont{
+  text-align: center;
 }
+
+// .tittle-img{
+//     width: 1600px;
+// gap: 0px;
+// opacity: 0px;
+
+// }
+// .container head{
+//     position: relative;
+//     background: #0B0B0B80;
+
+// }
 .head-img{
-    position: absolute;
     width: 200px;
-top: 0;
-left:85px;
 gap: 0px;
 opacity: 0px;
 
 }
-.search-bar{
+// .search-bar{
 
-    width: 1280px;
-height: 446px;
-gap: 0px;
-opacity: 0px;
-font-family: Montserrat;
-font-size: 50px;
-display: flex;
-justify-content: center;
-align-self: center;
-overflow: hidden;
-font-weight: 900;
-line-height: 60.95px;
-text-align: center;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
+//     width: 1280px;
+// height: 446px;
+// gap: 0px;
+// opacity: 0px;
+// font-family: Montserrat;
+// font-size: 50px;
+// display: flex;
+// justify-content: center;
+// align-self: center;
+// overflow: hidden;
+// font-weight: 900;
+// line-height: 60.95px;
+// text-align: center;
+// text-underline-position: from-font;
+// text-decoration-skip-ink: none;
 
 
-}
+// }
 
 .search-tittle-count{
-
-    position: absolute;
-    width: 588px;
-    height: 122px;
-    top: 40px;
-    left: 445px;
+  text-align: center;
+    width: 288px;
     gap: 0px;
     opacity: 0px;
-    
     font-family: Montserrat;
 font-size: 50px;
 font-weight: 900;
 line-height: 60.95px;
-text-align: center;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
 color: #DC56C5;
 
 
 }
 
 
-.autocomplete select{
-    margin-top: 20px;
-    position: absolute;
+.countrySelect{
     padding: 1px 15px;
     color: #fff; 
     font-size: 16px;
@@ -80,8 +76,6 @@ color: #DC56C5;
     width: 270px;
     height: 40px;
     font-family: 'Arial', sans-serif;
-    top: 214px;
-    left: 755px;
     gap: 0px;
     opacity: 0px;
     background: #939393;
@@ -95,11 +89,11 @@ select:focus {
     outline: none; 
   }
 
-.autocomplete{
-    display: inline-flex;
-    align-items: center;
+// .autocomplete{
+//     display: inline-flex;
+//     align-items: center;
  
-}
+// }
 
 .arrow {
     font-size: 14px;
@@ -111,9 +105,7 @@ select:focus {
 
 .searchInputSel{
 padding: 10px;
-margin-top: 20px;
-position: relative;
-    position: absolute;
+margin-right: 30px;
     border: none;
     outline: none;
     color: #fff; 
@@ -123,8 +115,6 @@ position: relative;
     width: 270px;
     background: #939393;
 height: 40px;
-top: 214px;
-left: 455px;
 gap: 0px;
 border-radius: 20px 20px ;
 opacity: 0px;
@@ -134,18 +124,18 @@ opacity: 0px;
 .searchInputSel::placeholder {
     color: rgba(255, 255, 255, 0.7); 
   }
-  .search-button {
-    position: absolute;
+//   .search-button {
+//     position: absolute;
 
-    background: none;
-    border: none;
-    color: rgba(255, 255, 255, 0.7);
-    cursor: pointer;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .search-button:hover {
-    color: #fff; 
-  }
+//     background: none;
+//     border: none;
+//     color: rgba(255, 255, 255, 0.7);
+//     cursor: pointer;
+//     padding: 0;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+//   .search-button:hover {
+//     color: #fff; 
+//   }
