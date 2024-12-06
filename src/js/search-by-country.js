@@ -14,15 +14,25 @@ const  countrySelect = document.getElementById("countrySelect")
             renderEvents(events)
         })
     
+<<<<<<< Updated upstream
     })  
     
 searchInput.addEventListener("input",
        debounce( function (event) {
+=======
+    })   
+
+
+    document.getElementById("searchInputSel").addEventListener("input",
+       throttle( function (event) {
+            console.log('Madonna');
+>>>>>>> Stashed changes
             const keyword = event.target.value.toLowerCase();
             getEventBySearchKey(keyword)
             .then(events=>{
                 renderEvents(events);
             })
+<<<<<<< Updated upstream
         }, 500)
     );
 
@@ -86,4 +96,10 @@ function autocomplete(input, arr){
             }
         });
     });}
+=======
+        }, 1000)
+    );
+
+
+>>>>>>> Stashed changes
 
