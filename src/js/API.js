@@ -15,7 +15,7 @@ async function fetchEvents() {
     const events = data._embedded?.events || [];
     renderEvents(events);
   } catch (error) {
-    console.error('Error fetching events:', error);
+    alert('Виникла помилка');
   }
 }
 
@@ -49,3 +49,20 @@ export async function getEventBySearchKey(keyword){
 
 fetchEvents();
 export default fetchEvents
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const loaderContainer = document.getElementById("loader-container");
+
+  function updateConnectionStatus() {
+    if (!navigator.onLine) {
+      loaderContainer.style.display = "flex";
+    } else {
+      loaderContainer.style.display = "none";
+    }
+  }
+  updateConnectionStatus();
+
+  window.addEventListener("online", updateConnectionStatus);
+  window.addEventListener("offline", updateConnectionStatus);
+});
