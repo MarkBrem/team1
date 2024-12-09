@@ -1,10 +1,26 @@
 import renderEvents from "./main";
 
+
+
 const eventsContainer = document.getElementById('events');
 
 
 const BASEURL = 'https://app.ticketmaster.com/discovery/v2/events?';
 const API = 'apikey=frHax5AbrwLC1IuSbtMAkrrAQfOByT93';
+
+window.addEventListener("load", () => {
+  const loaderContainer = document.getElementById("loader-container");
+
+  // function updateConnectionStatus() {
+      loaderContainer.style.display = "flex";
+  // }
+  
+  fetchEvents().then(res=>loaderContainer.style.display = "none")
+  // updateConnectionStatus();
+
+  // window.addEventListener("online", updateConnectionStatus);
+  // window.addEventListener("offline", updateConnectionStatus);
+});
 
 async function fetchEvents() {
   try {
@@ -47,22 +63,6 @@ export async function getEventBySearchKey(keyword){
   }
 }
 
-fetchEvents();
 export default fetchEvents
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const loaderContainer = document.getElementById("loader-container");
-
-  function updateConnectionStatus() {
-    if (!navigator.onLine) {
-      loaderContainer.style.display = "flex";
-    } else {
-      loaderContainer.style.display = "none";
-    }
-  }
-  updateConnectionStatus();
-
-  window.addEventListener("online", updateConnectionStatus);
-  window.addEventListener("offline", updateConnectionStatus);
-});
