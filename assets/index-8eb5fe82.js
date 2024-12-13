@@ -1,7 +1,7 @@
 (function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const n of document.querySelectorAll('link[rel="modulepreload"]'))r(n);new MutationObserver(n=>{for(const s of n)if(s.type==="childList")for(const a of s.addedNodes)a.tagName==="LINK"&&a.rel==="modulepreload"&&r(a)}).observe(document,{childList:!0,subtree:!0});function o(n){const s={};return n.integrity&&(s.integrity=n.integrity),n.referrerPolicy&&(s.referrerPolicy=n.referrerPolicy),n.crossOrigin==="use-credentials"?s.credentials="include":n.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function r(n){if(n.ep)return;n.ep=!0;const s=o(n);fetch(n.href,s)}})();const l=document.getElementById("events");function c(t){l.innerHTML="",console.log(t),t.forEach(e=>{var r;const o=document.createElement("div");o.classList.add("col-md-4","col-sm-6","col-lg-3"),o.innerHTML=`
       <div class="card event-card h-100">
         <img src="${(r=e.images[0])==null?void 0:r.url}" class="card-img-top" alt="${e.name}">
-        <div class="card-body d-flex flex-column">
+        <div class="card card-body d-flex flex-column">
           <h1 class="card-title">${e.name}</h5>
           <p class="date card-text mb-2">${e.dates.start.localDate}</p>
           <p class="where card-text">${e._embedded.venues[0].name}</p>
