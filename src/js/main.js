@@ -10,7 +10,7 @@ function renderEvents(events) {
     eventCard.innerHTML = `
       <div class="card event-card h-100">
         <img src="${event.images[0]?.url}" class="card-img-top" alt="${event.name}">
-        <div class="card-body d-flex flex-column">
+        <div class="card card-body d-flex flex-column">
           <h1 class="card-title">${event.name}</h5>
           <p class="date card-text mb-2">${event.dates.start.localDate}</p>
           <p class="where card-text">${event._embedded.venues[0].name}</p>
