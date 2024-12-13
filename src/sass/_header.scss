@@ -44,6 +44,21 @@ top: 10px;
 .label{
   position: relative;
 }
+.search{
+  position: absolute;
+  top: 15px;
+  right: 50px;
+  }
+  .arrow {
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    font-size: 14px;
+    color: #605e60;
+    margin-left: -25px; 
+    pointer-events: none; 
+  }
+
 .search-tittle-count{
   @media screen and (max-width: $mobile) {
     width: 200px;
@@ -106,15 +121,7 @@ align-items: center;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-.arrow {
-  position: absolute;
-  top: 270px;
-  right: 710px;
-  font-size: 14px;
-  color: #605e60;
-  margin-left: -25px; 
-  pointer-events: none; 
-}
+
 select:focus {
     outline: none; 
   }
@@ -138,11 +145,6 @@ gap: 0px;
 border-radius: 20px 20px ;
 opacity: 0px;
 } 
-.search{
-  position: absolute;
-  top: 273px;
-  left: 900px;
-  }
 
 
 
