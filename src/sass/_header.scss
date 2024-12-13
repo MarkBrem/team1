@@ -10,6 +10,9 @@ header{
 
 .headCont{
   text-align: center;
+  padding-bottom: 140px;
+  padding-top: 40px;
+
 }
 
 // .tittle-img{
@@ -50,11 +53,36 @@ opacity: 0px;
 
 // }
 
+
+
+
 .search-tittle-count{
+  @media screen and (max-width: $mobile) {
+    width: 212px;
+    margin-right: 40px;
+    align-items: center;
+size: 30px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 353px;
+size: 30px;
+align-items: center;
+  }
+
+
+
+  @media screen and (min-width: $desktop) {
+    width: 588px;
+size: 50px;
+align-items: center;
+  }
+
   text-align: center;
-    width: 288px;
-    gap: 0px;
-    opacity: 0px;
+    width: 588px;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
     font-family: Montserrat;
 font-size: 50px;
 font-weight: 900;
@@ -66,6 +94,15 @@ color: #DC56C5;
 
 
 .countrySelect{
+  position: relative;
+  @media screen and (min-width: $mobile) {
+    width: 270px;
+    margin-top: 10px;
+margin-right: 40px;
+align-items: center;
+  }
+
+
     padding: 1px 15px;
     color: #fff; 
     font-size: 16px;
@@ -87,21 +124,28 @@ select:focus {
     outline: none; 
   }
 
+  .arrow {
+    position: absolute;
+    top: 270px;
+    right: 710px;
+    font-size: 14px;
+    color: #605e60;
+    margin-left: -25px; 
+    pointer-events: none; 
+  }
+
 // .autocomplete{
 //     display: inline-flex;
 //     align-items: center;
  
 // }
 
-.arrow {
-    font-size: 14px;
-    color: #605e60;
-    margin-left: -25px; 
-    pointer-events: none; 
-  }
+
+
   
 
 .searchInputSel{
+  position: relative;
 padding: 10px;
 margin-right: 30px;
     border: none;
@@ -119,9 +163,15 @@ opacity: 0px;
 } 
 
 
+
 .searchInputSel::placeholder {
     color: rgba(255, 255, 255, 0.7); 
   }
+  .search{
+    position: absolute;
+    top: 273px;
+    left: 900px;
+    }
 //   .search-button {
 //     position: absolute;
 
