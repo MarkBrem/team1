@@ -120,12 +120,12 @@ html {
   }
   
   body{
-    font-family: var(--mainFonts);
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
   
-    color: $textColor;
+    color: #fff;
    
   }
   
@@ -136,7 +136,7 @@ html {
   h5,
   h6,
   p {
-    font-family: $mainFonts;
+    font-family: 'Montserrat', sans-serif;
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -154,7 +154,7 @@ html {
   }
   
   a {
-    color: $textColor;
+    color: #fff;
     text-decoration: none;
   }
   
