@@ -16,7 +16,7 @@ position: absolute;
     top: -30px;
     left: -20px;
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: 768px) {
     width: 359px;
     height: 302px;
 top: 10px;
@@ -24,7 +24,7 @@ top: 10px;
     
   }
 
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: 1280px) {
     top: -75px;
     left: -70px;
     width: 477px;
