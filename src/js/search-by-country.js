@@ -1,5 +1,6 @@
 import {getEventByCountry, getEventBySearchKey} from './API';
 import renderEvents from './main';
+import throttle from 'lodash.throttle';
 
 
 const searchInput = document.getElementById("searchInputSel")
