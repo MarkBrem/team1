@@ -1,0 +1,22 @@
+.team{
+    font-size: 25px;
+}
+.cardTeam{
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    // padding-left: 10px;
+    // text-align: center;
+    width: 220px;
+}
+.teamFoto{
+    width: 300px;
+    height: 300px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.team-div{
+    display: flex;
+    justify-content: center;
+    gap: 220px;
+}

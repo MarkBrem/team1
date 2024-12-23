@@ -1,4 +1,4 @@
-main{
+main, .container.team{
     background-image: url(img/mainBody.png);
     background-size: cover;
 }
@@ -13,7 +13,7 @@ main{
     color: #DC56C5 !important;
 }
 
-.date{
+.date, .teamText{
     font-weight:  400;
     font-size: 16px;
     color: #fff;

@@ -7,7 +7,13 @@ export default defineConfig({
   root: 'src',
   build: {
     rollupOptions: {
-      input: glob.sync('./src/*.html'),
+      // input:{
+      //   main: resolve(__dirname, './src/index.html'),
+      //   nested: resolve(__dirname, './src/team.html'),
+      // }
+      rollupOptions: {
+        input: glob.sync('./src/team.html'),
+      },
     },
     outDir: '../dist',
   },
