@@ -1,0 +1,103 @@
+.Titleteam{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+font-size: 50px;
+font-weight: 900;
+line-height: 60.95px;
+color: #DC56C5;
+    @media screen and (max-width: 768px) {
+        font-size: 20px;
+    }
+    @media screen and (min-width: 768px) {
+        font-size: 40px;
+    }
+    @media screen and (min-width: 1280px) {
+        font-size: 80px;
+    }
+}
+
+.cardTeam{
+    gap: 10px;
+    margin-bottom: 30px;
+    width: 400px;
+    @media screen and (max-width: 768px) {
+        width: 120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media screen and (min-width: 768px) {
+        width: 300px;
+    }
+    @media screen and (min-width: 1280px) {
+        width: 400px;
+    }
+}
+.teamFoto{
+    
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    @media screen and (max-width: 768px) {
+        width: 100px;
+        height: 160px;
+    }
+    @media screen and (min-width: 768px) {
+        width: 200px;
+        height: 260px;
+    }
+    @media screen and (min-width: 1280px) {
+        width: 300px;
+        height: 360px;
+    }
+}
+.team-div{
+    display: flex;
+    justify-content: center;
+    
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
+    @media screen and (min-width: 768px) {
+        gap: 40px;
+    }
+    @media screen and (min-width: 1280px) {
+        gap: 80px;
+    }
+}
+.teamText{
+    font-weight:  400;
+    color: #fff;
+    @media screen and (max-width: 768px) {
+        font-size: 11px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 15px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 20px;
+  }
+}
+.card-title.team{
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 20px;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 25px;
+    }
+}
+
+
+// @media screen and (min-width: 320px) {
+//     width: 320px;
+//   }
+//   @media screen and (min-width: 768px) {
+//     width: 768px;
+//   }
+//   @media screen and (min-width: 1280px) {
+//     width: 1280px;
+//   }

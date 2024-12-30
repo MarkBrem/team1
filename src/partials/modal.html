@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modal</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="card event-card h-100">
-        <img src="${event.images[0]?.url}" class="card-img-top" alt="${event.name}">
-        <div class="card card-body d-flex flex-column">
-          <h1 class="card-title">${event.name}</h5>
-          <p class="date card-text mb-2">${event.dates.start.localDate}</p>
-          <p class="where card-text">${event._embedded.venues[0].name}</p>
-        </div>
-      </div>
+<img src="../img/1.png" id="openModalImg" class="img__preview" alt="Preview Image">
+    <img src="./img/2.png" id="openModalImg" class="img__preview" alt="Preview Image">
+    <img src="./img/3.png" id="openModalImg" class="img__preview" alt="Preview Image">
+    <img src="./img/4.png" id="openModalImg" class="img__preview" alt="Preview Image">
+    <img src="../img/1.png" id="openModalImg" class="img__preview" alt="Preview Image">
+    <img src="./img/2.png" id="openModalImg" class="img__preview" alt="Preview Image">
+    <img src="./img/3.png" id="openModalImg" class="img__preview" alt="Preview Image">
+    <img src="./img/4.png" id="openModalImg" class="img__preview" alt="Preview Image">
+    <img src="../img/1.png" id="openModalImg" class="img__preview" alt="Preview Image">
+    <img src="./img/2.png" id="openModalImg" class="img__preview" alt="Preview Image">
+    <img src="./img/3.png" id="openModalImg" class="img__preview" alt="Preview Image">
+    <img src="./img/4.png" id="openModalImg" class="img__preview" alt="Preview Image">
     <div id="modal" class="modal">
         <div class="modal-content">
             <img src="./img/close.png" id="close-btn" alt="Close Button" class="close-btn">
@@ -53,8 +45,3 @@
         </div>
     </div>
     
-
-    <script type="module" src="./script.js"></script>
-    
-</body>
-</html>
