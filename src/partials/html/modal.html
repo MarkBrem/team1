@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card event-card h-100">
+        <img src="${event.images[0]?.url}" class="card-img-top" alt="${event.name}">
+        <div class="card card-body d-flex flex-column">
+          <h1 class="card-title">${event.name}</h5>
+          <p class="date card-text mb-2">${event.dates.start.localDate}</p>
+          <p class="where card-text">${event._embedded.venues[0].name}</p>
+        </div>
+      </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <img src="./img/close.png" id="close-btn" alt="Close Button" class="close-btn">
+            <img src="../img/1.png" id="ModalImg" class="img__modal" alt="Modal Image">
+            <div class="info__modal">
+                <div class="info__section">
+                    <h1>INFO</h1>
+                    <p id="modal-info-text"></p>    
+                </div>
+                <div class="when__section">
+                    <h1>WHEN</h1>
+                    <p id="modal-when-date"></p>
+                    <p id="modal-when-time"></p>
+                </div>
+                <div class="where__section">
+                    <h1>WHERE</h1>
+                    <p id="modal-where-city"></p> 
+                    <p id="modal-where-location"></p> 
+                </div>
+                <div class="who__section">
+                    <h1>WHO</h1>
+                    <p id="modal-who"></p> 
+                </div>
+                <div class="prices__section">
+                    <h1>PRICES</h1>
+                    <p id="modal-price-standard"></p> 
+                    <button class="prices__btn">BUY TICKETS</button>
+                    <p id="modal-price-vip"></p> 
+                    <button class="prices__btn">BUY TICKETS</button>
+                </div>
+                <button class="more__but">MORE FROM THIS AUTHOR</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script type="module" src="./script.js"></script>
+    
+</body>
+</html>

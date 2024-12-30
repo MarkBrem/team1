@@ -21,7 +21,5 @@ function renderEvents(events) {
   });
 }
 
-
-
 export default renderEvents
 
