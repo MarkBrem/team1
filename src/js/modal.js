@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+++document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("modal");
     const closeBtn = document.getElementById("close-btn");
     const infoText = document.getElementById("modal-info-text");
