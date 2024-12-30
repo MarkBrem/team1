@@ -1,165 +1,146 @@
-.img__preview {
-    border-radius: 50px 0px; 
-    cursor: pointer;
-}
-
-.modal  {
-    display: none; 
+.backdrop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
+    z-index: 5;
+    pointer-events: none;
+  }
+  
+  .modal {
+    display: none;
+    position: absolute;
+    min-width: 900px;
+    min-height: 950px;
+    background-color: #fff; /* Поставьте ваш цвет фона */
+    border-radius: 300px 0px;
+    padding: 30px 62px;
+    pointer-events: auto;
+    
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      min-width: 595px;
+      min-height: 790px;
+      border-radius: 250px 0px;
+    }
+  
+    @media screen and (max-width: 767px) {
+      min-width: 272px;
+      min-height: 815px;
+      border-radius: 150px 0px;
+    }
+  }
+  
+  .modal.is-show {
+    display: block;
+  }
+  
+  .content-container {
+    display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
-    border-radius: 0;
-}
-
-
-
-.img__modal {
-    height: auto;
-    width: 140px;
-    border-radius: 0;
-    object-fit: cover;
-
-}
-
-.modal-content {
-    background: white;
-    padding: 20px;
-    display: flex;
-    width: 100%;
-    max-width: 930px;
-    height: 1023px;
-    position: relative;
-    text-align: left;
-    border-radius: 300px 0 0 300px; 
-    border-radius: 300px 0 300px 0; 
-}
-
-.modal-content img {
-    width: 100%; 
-    height: 641px;
-    border-radius: 10px; 
-}
-
-.img__modal {
-    width: 140px;
-    height: auto;
-    border-radius: 0;
-    object-fit: cover;
-    margin-top: 235px;
-    margin-bottom: 147px;
-    margin-right: 60px;
-}
-
-.modal-info {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-align: left;
-    width: 100%;
-
-}
-
-.info__modal {
-    margin-top: 210px;
-}
-
-.info__modal h1 {
-    margin-bottom: 7px;
-}
-
-.info__modal p {
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.info__section,
-.when__section,
-.where__section,
-.who__section,
-.prices__section {
-    margin-bottom: 20px;
-}
-
-.modal-info h3 {
-    margin: 0;
-    font-size: 16px;
-    color: #DC56C5; 
-}
-
-.modal-info p {
-    margin: 0;
-    font-size: 14px;
-    color: #333;
-}
-
-.modal-info h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #DC56C5;
-}
-
-.modal-info-text {
-    margin-top: 0;
-}
-
-#close-btn {
-    position: absolute;
-    top: 20px; 
-    right: 20px;
-    width: 25px;
-    height: 25px; 
-    cursor: pointer;
-    object-fit: contain; 
-    display: inline-block; 
-}
-
-
-.prices__btn {
-    background-color: #4C00FE; 
-    color: #FFFFFF; 
-    border: none; 
-    padding: 10px 20px;
-    font-size: 16px; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    margin-bottom: 10px;
-}
-
-.more__but {
-    background-color: transparent;
-    color: #4C00FE; 
-    border: 2px solid #4C00FE;
-    padding: 10px 20px; 
-    font-size: 16px;
-    border-radius: 5px; 
-    cursor: pointer;
-    margin-top: 20px; 
-    display: block;
-    width: fit-content; 
-    text-align: center;
+    margin-top: 43px;
+  }
+  
+  .small-img {
+    width: 132px;
+    height: 132px;
+    border-radius: 70px;
     margin-left: auto;
-    margin-right: auto; 
-}
-
-
-
-
-@media (max-width: 768px) {
-    .modal-content {
-        width: 95%;
+    margin-right: auto;
+  
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 70px;
+      height: 70px;
     }
-}
-
-@media (max-width: 480px) {
-    .modal-content {
-        width: 100%;
-        border-radius: 0;
+  
+    @media screen and (max-width: 767px) {
+      width: 102px;
+      height: 102px;
     }
-}
+  }
+  
+  .big-img {
+    width: 370px;
+    height: 641px;
+  
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 233px;
+      height: 416px;
+    }
+  
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+  
+  .info-container {
+    margin-left: 60px;
+  
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 280px;
+      margin-left: 30px;
+    }
+  
+    @media screen and (max-width: 767px) {
+      width: 243px;
+      margin-left: 0;
+    }
+  }
+  
+  .modal h3 {
+    color: #333; /* Поставьте ваш цвет для заголовков */
+    margin-top: 20px;
+  }
+  
+  .modal p {
+    color: #0E0E0E;
+    margin-top: 7px;
+  }
+  
+  .modal button {
+    display: inline-block;
+    &:not(.close-modal-btn) {
+      color: #fff;
+      background-color: #4C00FE; /* Цвет кнопки */
+    }
+    
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .close-modal-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: transparent;
+    z-index: 7;
+  }
+  
+  .loader {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border-left: 4px solid #DC56C5;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotation 1300ms linear infinite;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
