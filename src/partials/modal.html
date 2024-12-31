@@ -1,40 +1,29 @@
-<div id="events" class="events-container">
-</div>
+<div class="container main">
+    <div id="events" class="row g-4"></div>
+    <div id="pagination" class="d-flex justify-content-center mt-4"></div>
+  </div>
 
-  <div id="modal" class="modal">
+  <div class="backdrop"></div>
+  <div class="modal">
     <div class="modal-content">
-      <img src="./img/close.png" id="close-btn" alt="Close Button" class="close-btn">
-      <img src="" id="ModalImg" class="img__modal" alt="Modal Image">
-      <div class="info__modal">
-        <div class="info__section">
-          <h1>INFO</h1>
-          <p id="modal-info-text"></p>    
+      <button class="close-modal-btn">Close</button>
+      <div class="modal-body">
+        <img class="big-img" src="" alt="">
+        <div class="info-container">
+          <h3 class="title-info">INFO</h3>
+          <p class="promoter-desc"></p>
+          <h3 class="title-when">WHEN</h3>
+          <p class="date"></p>
+          <p class="time"></p>
+          <h3 class="title-where">WHERE</h3>
+          <p class="location"></p>
+          <p class="venue-name"></p>
+          <h3 class="title-who">WHO</h3>
+          <p class="event-name"></p>
+          <h3 class="title-price">PRICES</h3>
+          <p class="price-range"></p>
         </div>
-        <div class="when__section">
-          <h1>WHEN</h1>
-          <p id="modal-when-date"></p>
-          <p id="modal-when-time"></p>
-        </div>
-        <div class="where__section">
-          <h1>WHERE</h1>
-          <p id="modal-where-city"></p> 
-          <p id="modal-where-location"></p> 
-        </div>
-        <div class="who__section">
-          <h1>WHO</h1>
-          <p id="modal-who"></p> 
-        </div>
-        <div class="prices__section">
-          <h1>PRICES</h1>
-          <p id="modal-price-standard"></p> 
-          <button class="prices__btn">BUY TICKETS</button>
-          <p id="modal-price-vip"></p> 
-          <button class="prices__btn">BUY TICKETS</button>
-        </div>
-        <button class="more__but">MORE FROM THIS AUTHOR</button>
       </div>
     </div>
   </div>
-
-  <script type="module" src="./js/modal.js"></script>
   
